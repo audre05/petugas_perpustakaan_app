@@ -2,22 +2,14 @@
 /// message : "success"
 /// data : [{"id":1,"kategori_id":1,"judul":"Belajar mengenal angka","penulis":"kusnaidi","penerbit":"PT alangka","tahun_terbit":2024,"created_at":"2024-01-09T05:43:09.000000Z","updated_at":"2024-01-09T05:43:09.000000Z","kategori":{"id":1,"nama":"umum"}}]
 
-<<<<<<< HEAD
 class ResponseBook {
   ResponseBook({
-=======
-class ResponeBook {
-  ResponeBook({
->>>>>>> origin/master
-      this.status, 
-      this.message, 
-      this.data,});
+    this.status,
+    this.message,
+    this.data,
+  });
 
-<<<<<<< HEAD
   ResponseBook.fromJson(dynamic json) {
-=======
-  ResponeBook.fromJson(dynamic json) {
->>>>>>> origin/master
     status = json['status'];
     message = json['message'];
     if (json['data'] != null) {
@@ -27,6 +19,7 @@ class ResponeBook {
       });
     }
   }
+
   int? status;
   String? message;
   List<DataBook>? data;
@@ -40,7 +33,6 @@ class ResponeBook {
     }
     return map;
   }
-
 }
 
 /// id : 1
@@ -55,15 +47,16 @@ class ResponeBook {
 
 class DataBook {
   DataBook({
-      this.id, 
-      this.kategoriId, 
-      this.judul, 
-      this.penulis, 
-      this.penerbit, 
-      this.tahunTerbit, 
-      this.createdAt, 
-      this.updatedAt, 
-      this.kategori,});
+    this.id,
+    this.kategoriId,
+    this.judul,
+    this.penulis,
+    this.penerbit,
+    this.tahunTerbit,
+    this.createdAt,
+    this.updatedAt,
+    this.kategori,
+  });
 
   DataBook.fromJson(dynamic json) {
     id = json['id'];
@@ -74,8 +67,10 @@ class DataBook {
     tahunTerbit = json['tahun_terbit'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
-    kategori = json['kategori'] != null ? Kategori.fromJson(json['kategori']) : null;
+    kategori =
+        json['kategori'] != null ? Kategori.fromJson(json['kategori']) : null;
   }
+
   int? id;
   int? kategoriId;
   String? judul;
@@ -101,7 +96,6 @@ class DataBook {
     }
     return map;
   }
-
 }
 
 /// id : 1
@@ -109,13 +103,15 @@ class DataBook {
 
 class Kategori {
   Kategori({
-      this.id, 
-      this.nama,});
+    this.id,
+    this.nama,
+  });
 
   Kategori.fromJson(dynamic json) {
     id = json['id'];
     nama = json['nama'];
   }
+
   int? id;
   String? nama;
 
@@ -125,5 +121,4 @@ class Kategori {
     map['nama'] = nama;
     return map;
   }
-
 }

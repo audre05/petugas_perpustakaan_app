@@ -30,11 +30,11 @@ class BookController extends GetxController with StateMixin<List<DataBook>>{
     try{
       final response = await ApiProvider.instance().get(Endpoint.book);
       if(response.statusCode == 200){
-        final ResponseBook responeBook = ResponseBook.fromJson(response.data);
-        if(responeBook.data!.isEmpty) {
+        final ResponseBook responseBook = ResponseBook.fromJson(response.data);
+        if(responseBook.data!.isEmpty) {
           change(null, status: RxStatus.empty());
         }else{
-          change(responeBook.data, status: RxStatus.success());
+          change(responseBook.data, status: RxStatus.success());
         }
 
       }else{
