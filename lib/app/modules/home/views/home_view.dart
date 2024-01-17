@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:untitled2/app/routes/app_pages.dart';
+=======
+>>>>>>> origin/master
 
 import '../controllers/home_controller.dart';
 
@@ -14,6 +17,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
+<<<<<<< HEAD
       body:  Center(
         child: Column(
           children: [
@@ -23,6 +27,13 @@ class HomeView extends GetView<HomeController> {
                 , child: Text("peminjaman"))
           ],
         )
+=======
+      body: const Center(
+        child: Text(
+          'HomeView is working',
+          style: TextStyle(fontSize: 20),
+        ),
+>>>>>>> origin/master
       ),
     );
   }
